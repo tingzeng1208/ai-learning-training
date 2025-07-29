@@ -5,6 +5,7 @@ env/
 ENV/
 env.bak/
 venv.bak/
+secrets/
 
 # Python cache files
 __pycache__/
