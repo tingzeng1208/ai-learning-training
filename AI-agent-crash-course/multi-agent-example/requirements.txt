@@ -1,0 +1,5 @@
+google-agents>=0.1.0
+google-cloud-aiplatform>=1.38.0
+google-auth>=2.6.0
+grpcio>=1.51.0
+protobuf>=4.23.0

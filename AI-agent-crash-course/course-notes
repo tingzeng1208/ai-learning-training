@@ -1,0 +1,46 @@
+without A2A, has to use /api/chat for communication between agents
+
+with A2A, standardize using messages over HTTPS, remote agents become local agents
+AgentCard,
+name description URL version, default Input skills
+three paint points: what agent can do: agent AgentCard
+communication: Messages
+Execuation: Agent excuator
+
+                        message example: {
+                          role: "user,
+                          parts: [{"type":"text", "text":"..."}],
+                          messageId: "123...",
+                          taskId: "ABC...",
+                          contextId: "XYZ..."
+                        }
+
+different types of agent work flow:
+
+1. prompt chaining
+2. routing: for tasks that can be categoried or using different models or agents for differnt tasks
+
+n8n is a low code AI agent build framework. to run in docker:
+docker run -it --rm \
+ -p 5678:5678 \
+ -e N8N_BASIC_AUTH_ACTIVE=true \
+ -e N8N_BASIC_AUTH_USER=user \
+ -e N8N_BASIC_AUTH_PASSWORD=password \
+ n8nio/n8n
+
+ for google ADK,
+1. Instruction is the key
+2. Error handling when you have many different agents and when they fail
+3. LLM Variability, twist the configuration, especially temperature.
+4. can't mix google built-in tools with custom tools, need to use the same tool type
+5. User OpenRouter (fee based system) to use different models, like Claude, Gemini, etc.
+
+for using other ai models, need open lrouter 
+
+youtube link: https://www.youtube.com/watch?v=P4VFL9nIaIA&t=4553s
+
+https://google.github.io/adk-docs/agents/llm-agents/
+
+for structured data: input_schema is too rigid, not good for use, but output_shema and output_keywords are very useful.
+
+session. state, runner: 

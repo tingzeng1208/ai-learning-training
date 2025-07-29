@@ -1,0 +1,20 @@
+
+
+services:
+  adk-web-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: adk_greeting_agent
+    ports:
+      - "8081:8081"
+    environment:
+      - PORT=8081
+    restart: unless-stopped
+    volumes:
+      - ./greeting_agent:/app/greeting_agent
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
