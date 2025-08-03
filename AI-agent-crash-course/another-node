@@ -1,0 +1,2 @@
+
+multi-agent: sub agent can't use built-in tool like google search, the work around is to use agenttool (agent as a tool)
